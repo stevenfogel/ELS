@@ -1,0 +1,25 @@
+link(rel="stylesheet" href="/client/app/orders/createorder/user.createorder.css")
+form.well.container#createOrderForm(ng-submit="vm.createOrder()")
+  div.hcenter: h1 Create
+  hr
+  div.row
+    label Inputs marked with * are required
+  br
+  div.row
+    div.col-50
+      label Date of Delivery *
+      input.form-control(type="date", ng-model="vm.order.date", required)
+    div.col-50 
+      label Container Type *
+      select.form-control(ng-model="vm.order.containerType", required)
+        option(value="Container 1") Container 1
+        option(value="Container 2") Container 2
+        option(value="Container 3") Container 3
+    div.col-33
+      label Quatity of Containers *
+      input.form-control(type="number" ng-model="vm.order.quantity", required)
+  hr
+  div.row.hcenter
+    button.btn.btn-submit Create Order
+  br
+  br

@@ -1,0 +1,27 @@
+{
+  "name": "week4day1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && open 'http://localhost:3000' && node ./server/server.js",
+    "test": "node_modules/.bin/mocha --timeout 90 --reporter spec --recursive ./**/*.spec.js",
+    "devstart": "open \"http://localhost:3000\" && nodemon ./server/server -w server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-jwt": "^3.4.0",
+    "jade": "^1.11.0",
+    "jsonwebtoken": "^7.0.0",
+    "mongoose": "^4.4.20"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4",
+    "sinon-mongoose": "^1.2.1"
+  }
+}

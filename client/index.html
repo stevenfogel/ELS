@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Container Order</title>
+    <base href="/" />
+    <link rel="stylesheet" href="/client/assets/bootswatch/paper.min.css">
+    <link rel="stylesheet" href="/client/shared/shared.css">
+  </head>
+  <body>
+    <navbar></navbar>
+    <div ui-view="" id="content"></div>
+
+    <!-- angular -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+
+    <!-- module -->
+    <script src="/client/shared/module.js"></script>
+    <script src="/client/app/users/user.module.js"></script>
+    <script src="/client/app/orders/order.module.js"></script>
+    <script src="/client/app/admins/admin.module.js"></script>
+
+    <!-- authInterceptor -->
+    <script src="/client/shared/authInceptor.js"></script>
+
+    <!-- service -->
+    <script src="/client/app/users/user.service.js"></script>
+    <script src="/client/app/orders/order.service.js"></script>
+    <script src="/client/app/admins/admin.service.js"></script>
+
+    <!-- navbar -->
+    <script src="client/components/navbar/navbar.directive.js"></script>
+    <script src="client/components/navbar/navbar.controller.js"></script>
+
+    <!-- controller -->
+    <script src="/client/app/users/register/user.register.controller.js"></script>
+    <script src="/client/app/users/login/user.login.controller.js"></script>
+    <script src="/client/app/users/main/user.main.controller.js"></script>
+    <script src="/client/app/users/register/user.register.controller.js"></script>
+    <script src="/client/app/orders/createorder/user.createorder.controller.js"></script>
+    <script src="/client/app/admins/main/admin.main.controller.js"></script>
+    <script src="/client/app/admins/register/admin.register.controller.js"></script>
+    <script src="/client/app/admins/evaluate/admin.evaluate.controller.js"></script>
+
+
+  </body>
+</html>

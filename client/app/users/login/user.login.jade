@@ -1,0 +1,16 @@
+link(rel="stylesheet" href="/client/app/users/login/user.login.css")
+form(ng-submit="vm.login()")
+  div.hcenter.well.container
+    div
+      h1 Log In
+    br
+    div
+      label Email
+      input.form-control(type="email", ng-model="vm.user.email", required)
+    br
+    div
+      label Password
+      input.form-control(type="password", ng-model="vm.user.password", required)
+    br
+    div.hcenter
+      button.btn.btn-submit(type="submit") Log In

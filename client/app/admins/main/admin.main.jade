@@ -1,0 +1,36 @@
+link(rel="stylesheet", href="/client/app/admins/main/admin.main.css")
+br
+div.hcenter
+  button.btn.btn-success(ui-sref="admin register") Register New Admin
+br
+form
+  table(border="5", style="width:100%", ng-repeat="u in vm.users")
+    thead
+      tr
+        th.hcenter(colspan="7")
+          h3: b {{ u.email }}'s Order History
+    thead
+      tr
+        th.hcenter
+          h4: b Date of Delivery
+        th.hcenter 
+          h4: b Container Type
+        th.hcenter
+          h4: b Quantity
+        th.hcenter
+          h4: b Status
+        th.hcenter
+          h4: b Price
+        th.hcenter
+          h4: b Total
+        th.hcenter
+          h4: b Evaluate
+    tbody
+      tr(ng-repeat="o in u.containers").hcenter
+        td: b {{ o.date | date : 'shortDate'}}
+        td: b {{ o.containerType }}
+        td: b {{ o.quantity }}
+        td: b {{ o.status }} 
+        td: b '2'
+        td: b '3'
+        td: button.btn.btn-info(ui-sref="admin evaluate({ id: o._id })") Edit

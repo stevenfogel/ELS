@@ -1,0 +1,22 @@
+h1.hcenter.well.container Container Evaluation
+ul.hcenter.well.container(style="list-style: none" ng-show="!vm.isEditing")
+  li {{ vm.order.date | date : 'shortDate' }}
+  li {{ vm.order.containerType }}
+  li {{ vm.order.quantity }}
+  li {{ vm.order.status }}
+  
+form.hcenter.well.container(ng-show="vm.isEditing" ng-submit="vm.update()")
+  label Status: 
+  select.form-control(ng-model="vm.updateOrder.status")
+    option(value="Pending") Pending
+    option(value="Confirmed") Confirmed
+    option(value="Denied") Denied
+  br
+  
+  button.btn.btn-danger(type="button" style="margin-right: 10px;" ng-click="vm.isEditing = false") Go Back
+  button.btn.btn-success Submit
+  
+div.hcenter.well.container(ng-show="!vm.isEditing")
+
+  button.btn.btn-danger(ng-click="vm.remove()" style="margin-right: 10px;") Delete
+  button.btn.btn-info(ng-click="vm.startEditing()") Confirm Status

@@ -1,0 +1,44 @@
+form.container(ng-submit="vm.register()")
+  div.hcenter: h1 Admin Register
+  hr
+  div.row
+    label Inputs marked with * are required
+  br
+  div.row
+    div.col-50
+      label Email *
+      input.form-control(type="email", ng-model="vm.user.email", required)
+    div.col-50
+      label Password *
+      input.form-control(type="password", ng-model="vm.user.password", required)
+  br
+  div.row
+    div.col-33
+      label Company Name *
+      input.form-control(ng-model="vm.user.companyName", required)
+    div.col-33
+      label First Name *
+      input.form-control(ng-model="vm.user.firstName")
+    div.col-33
+      label Last Name
+      input.form-control(ng-model="vm.user.lastName")
+    div.col-33
+      label Phone Number *
+      input.form-control(ng-model="vm.user.phoneNumber", required)
+    div.col-33
+      label Secondary Phone Number
+      input.form-control(ng-model="vm.user.secPhoneNumber")
+    div.col-33
+      label Street Address *
+      input.form-control(ng-model="vm.user.streetAddress", required)
+    div.col-33
+      label State *
+      input.form-control(ng-model="vm.user.state", required)
+    div.col-33
+      label Zip Code *
+      input.form-control(ng-model="vm.user.zipCode", required)
+  hr
+  div.row.hcenter
+    button.btn.btn-submit Register
+  br
+  br
