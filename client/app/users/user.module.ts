@@ -17,5 +17,10 @@ namespace app {
       templateUrl: '/client/app/users/register/user.register.jade',
       controller: 'UserRegisterController as vm'
     })
+    .state('user edit', {
+      url: '/edit/:id',
+      templateUrl: '/client/app/users/edit/user.edit.jade',
+      controller: 'UserEditController as vm'
+    })
   });
 }

@@ -9,7 +9,7 @@ form
       tr
         th.hcenter(colspan="7")
           h3: b {{ u.email }}'s Order History      
-            button.btn.btn-info Edit
+            button.btn.btn-danger(ui-sref="admin delete user({ id: u._id })" style="margin-right: 10px;") Delete User
     thead
       tr
         th.hcenter

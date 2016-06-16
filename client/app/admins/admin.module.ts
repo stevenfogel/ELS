@@ -17,5 +17,10 @@ namespace app {
       templateUrl: '/client/app/admins/evaluate/admin.evaluate.jade',
       controller: 'AdminEvaluateController as vm'
     })
+    .state('admin delete user', {
+      url: '/admin/delete/user/:id',
+      templateUrl: '/client/app/admins/deleteuser/admin.deleteuser.jade',
+      controller: 'AdminDeleteUserController as vm'
+    })
   });
 }

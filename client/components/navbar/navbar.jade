@@ -8,3 +8,5 @@ div#navbar
     span: a(ui-sref="user register") Register
   div.nav-right(ng-show="nav.status._id")
     span: a(ng-click="nav.logout()") {{ nav.status.email }} Logout
+    br
+    a(ui-sref="user edit({ id: nav.status._id })") Edit Profile

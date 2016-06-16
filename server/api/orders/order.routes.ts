@@ -9,7 +9,7 @@ const auth = jwt({
 
 router.get('/', auth, controller.getAll);
 router.post('/', auth, controller.createOrder, controller.adoptUser);
-router.get('/:id', controller.getOne)
+router.get('/:id', controller.getOne);
 router.put('/:id', controller.update);
 router.delete('/:id', controller.remove);
 

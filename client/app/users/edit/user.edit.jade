@@ -1,0 +1,47 @@
+h1 Edit
+ul.hcenter.well.container(style="list-style: none" ng-show="!vm.isUpdatingUser")
+  li {{ vm.user.email }}
+  li {{ vm.user.firstName }}
+  li {{ vm.user.lastName }}
+  li {{ vm.user.streetAddress }}
+  li {{ vm.user.state }}
+  li {{ vm.user.zipCode }}
+  li {{ vm.order.phoneNumber }}
+  li {{ vm.order.secPhoneNumber }}
+  li {{ vm.user.companyName }}
+  
+form.hcenter.well.container(ng-show="vm.isUpdatingUser" ng-submit="vm.updateUserInfo()")
+  label Email: 
+  input.form-control(ng-model="vm.updateUser.email", required)
+  br
+  label First Name: 
+  input.form-control(ng-model="vm.updateUser.firstName", required)
+  br
+  label Last Name: 
+  input.form-control(ng-model="vm.updateUser.lastName", required)
+  br
+  label Street Address: 
+  input.form-control(ng-model="vm.updateUser.streetAddress", required)
+  br
+  label State: 
+  input.form-control(ng-model="vm.updateUser.state", required)
+  br
+  label Zip Code: 
+  input.form-control(ng-model="vm.updateUser.zipCode", required)
+  br
+  label Phone Number: 
+  input.form-control(ng-model="vm.updateUser.phoneNumber", required)
+  br
+  label Second Phone Number: 
+  input.form-control(ng-model="vm.updateUser.secPhoneNumber", required)
+  br
+  label Company Name: 
+  input.form-control(ng-model="vm.updateUser.companyName", required)
+  br
+  
+  button.btn.btn-danger(type="button" style="margin-right: 10px;" ng-click="vm.isUpdatingUser = false") Go Back
+  button.btn.btn-success Submit
+  
+div.hcenter.well.container(ng-show="!vm.isUpdatingUser")
+
+  button.btn.btn-info(ng-click="vm.startUpdating()") Edit Profile

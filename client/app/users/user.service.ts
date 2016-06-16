@@ -70,6 +70,18 @@ namespace app {
       return decodeURIComponent(encodeURIComponent(this.$window.atob(output))); //polifyll https://github.com/davidchambers/Base64.js
     }
 
+    public getOne(id: number) {
+      return this.UserResource.get({ id: id }).$promise;
+    }
+
+    public removeUser(id: number) {
+      return this.UserResource.remove({id: id}).$promise;
+    }
+
+    public updateUser(user:IUser) {
+      return this.UserResource.update({id: user._id}, user).$promise
+    }
+
     public getAllUsers() {
       let q = this.$q.defer();
       this.$http.get('/api/v1/admins/admin/mainpage').then((res) => {

@@ -26,3 +26,28 @@ export function register(req: express.Request, res: express.Response, next: Func
     });
   });
 }
+
+
+export function removeUser(req: express.Request, res: express.Response, next) {
+  User.findOneAndRemove({_id: req.params.id}, (err, p) => {
+    if(err) return next(err);
+    if(!p) return res.sendStatus(404);
+    res.json(p);
+  })
+}
+
+export function updateUser(req: express.Request, res: express.Response, next) {
+  User.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, (err, p) => {
+    if(err) return next(err);
+    if(!p) return res.sendStatus(404);
+    res.json(p);
+  })
+}
+
+export function getOne(req: express.Request, res: express.Response, next) {
+  User.findOne({_id: req.params.id}, req.params.body, {new: true}, (err, p) => {
+    if(err) return next(err);
+    if(!p) return res.sendStatus(404);
+    res.json(p);
+  })
+}
