@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/typings install && /.bin/tsc && node ./server/server.js",
+    "start": "node_modules/.bin/typings install && node_modules/.bin/tsc && node ./server/server.js",
     "test": "node_modules/.bin/mocha --timeout 90 --reporter spec --recursive ./**/*.spec.js",
     "devstart": "open \"http://localhost:3000\" && nodemon ./server/server -w server"
   },
