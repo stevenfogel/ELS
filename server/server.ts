@@ -7,6 +7,7 @@ import * as Order from './api/orders/order.model'
 import config = require('./config/config');
 
 //Global Vars
+const PORT = process.env.PORT || 3000;
 const MONGO_URL = process.env.MONGO_URL || "mongodb://localhost/container-manager";
 let app = express();
 
@@ -68,6 +69,6 @@ app.use((err: any, req, res, next) => {
 })
 
 // Listen
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server is listening on localhost:3000');
 });
