@@ -7,7 +7,7 @@ import * as Order from './api/orders/order.model'
 import config = require('./config/config');
 
 //Global Vars
-const MONGO_URL = "mongodb://localhost/container-manager";
+const MONGO_URL = process.env.MONGO_URL || "mongodb://localhost/container-manager";
 let app = express();
 
 //Mongoose Connection
