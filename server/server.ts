@@ -1,3 +1,5 @@
+require('dotenv').config({ silent: true });
+
 // Imports
 import * as mongoose from "mongoose";
 import * as express from "express";

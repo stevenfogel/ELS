@@ -1,6 +1,6 @@
 *.js
 !*.spec.js
-
+.env
 /bower_components
 /node_modules
 /typings

@@ -46,7 +46,7 @@ userSchema.method('createJWT', function() {
     _id: this._id,
     email: this.email,
     isAdmin: this.isAdmin
-  }, 'apple');
+  }, process.env.JWT_SECRET);
 });
 
 export let User = mongoose.model<IUserModel>('User', userSchema);
