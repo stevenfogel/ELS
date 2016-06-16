@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && open 'http://localhost:3000' && node ./server/server.js",
+    "start": "node_modules/.bin/tsc && node ./server/server.js",
     "test": "node_modules/.bin/mocha --timeout 90 --reporter spec --recursive ./**/*.spec.js",
     "devstart": "open \"http://localhost:3000\" && nodemon ./server/server -w server"
   },
@@ -17,7 +17,8 @@
     "express-jwt": "^3.4.0",
     "jade": "^1.11.0",
     "jsonwebtoken": "^7.0.0",
-    "mongoose": "^4.4.20"
+    "mongoose": "^4.4.20",
+    "typescript": "^1.8.10"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
